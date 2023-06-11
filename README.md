@@ -21,15 +21,29 @@ Priority Scheduling
 
 struct process  
 {  
-int burst_time;  
-int wait_time;  
-int turnaround_time;  
+   int burst_time;    
+   int wait_time;  
+   int turnaround_time;  
 } Process;  
 This is the structure used to simulate the process. However one can also use arrays to get the same details of the processes
 
 Algorithm:  
-1. Input the no of processes
-2. Get the burst time of each process
-3. For the first process there is no waiting time. It executes as soon as it arrives.   
+1. Start
+2. Input the no of processes(n)  
+3. Get the burst time of each process
+4. For the first process there is no waiting time. It executes as soon as it arrives.   
    set p[0].wait_time = 0  
    set p[0].turnaround_time = p[0].burst_time
+5. for(i = 0;i < n;i++) {  
+      p[i].wait_time = p[i-1].wait_time + p[i-1].burst_time;  
+      p[i].turnaround_time = p[i].wait_time + p[i].burst_time;  
+   }  
+6. for(i = 0;i < n;i++) {  
+      sumWait += p[i].wait_time;  
+      sumTurnaround += p[i].turnaround_time;  
+   }
+7. Average waiting time = sumWait/n  
+8. Average turnaround time = sumTurnaround/n    
+9. Display the process table and the Gantt chart
+10. Stop
+     
