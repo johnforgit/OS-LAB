@@ -21,8 +21,8 @@ Priority Scheduling
 
 struct process  
 {  
-int burst_time;
-int wait_time;
+int burst_time;  
+int wait_time;  
 int turnaround_time;  
 } Process;  
 This is the structure used to simulate the process. However one can also use arrays to get the same details of the processes
