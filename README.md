@@ -23,13 +23,13 @@ struct process
 {  
 int burst_time;
 int wait_time;
-int turnaround_time;
+int turnaround_time;  
 } Process;  
 This is the structure used to simulate the process. However one can also use arrays to get the same details of the processes
 
 Algorithm:  
 1. Input the no of processes
 2. Get the burst time of each process
-3. For the first process there is no waiting time. It executes as soon as it arrives. 
-   set p[0].wait_time = 0
+3. For the first process there is no waiting time. It executes as soon as it arrives.   
+   set p[0].wait_time = 0  
    set p[0].turnaround_time = p[0].burst_time
