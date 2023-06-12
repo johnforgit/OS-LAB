@@ -10,12 +10,12 @@ void main() {
 	printf("\n\t\t--------------------------\n");
 	printf("\n  Enter the number of blocks: ");
 	scanf("%d",&nb);
-	printf("\n  Enter the number of files: ");
+	printf("\n  Enter the number of processes: ");
 	scanf("%d",&nf);
 	printf("\n  Enter the size of the blocks: ");
 	for(i = 1;i <= nb;i++)
 		scanf("%d",&b[i]);
-	printf("\n  Enter the size of the files: ");
+	printf("\n  Enter the size of the processes: ");
 	for(i=1;i<=nf;i++)
 		scanf("%d",&f[i]);
 	for(i = 1;i <= nf;i++) {
@@ -34,7 +34,7 @@ void main() {
 		lowest=10000;
 	}
 
-	printf("\n  File No\tFile Size\tBlock No\tBlock Size\tFragment");
+	printf("\n  Process No\tProcess Size\tBlock No\tBlock Size\tFragment");
 	for(i=1;i<=nf && ff[i]!=0;i++)
 	printf("\n  %d\t\t%d\t\t%d\t\t%d\t\t%d",i,f[i],ff[i],b[ff[i]],frag[i]);
 	printf("\n\n");
